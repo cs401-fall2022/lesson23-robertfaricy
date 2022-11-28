@@ -5,7 +5,7 @@ const sqlite3 = require('sqlite3').verbose()
 /* GET home page. */
 
 router.get('/', function (req, res, next) {
-  var db = new sqlite3.Database('mydb3.sqlite3',
+  var db = new sqlite3.Database('myBlog.sqlite3',
     sqlite3.OPEN_READWRITE | sqlite3.OPEN_CREATE,
     (err) => {
       if (err) {
@@ -43,7 +43,7 @@ router.get('/', function (req, res, next) {
 
 router.post('/add', (req, res, next) => {
   console.log("Adding blog to database");
-  var db = new sqlite3.Database('mydb3.sqlite3',
+  var db = new sqlite3.Database('myBlog.sqlite3',
     sqlite3.OPEN_READWRITE | sqlite3.OPEN_CREATE,
     (err) => {
       if (err) {
@@ -65,7 +65,7 @@ router.post('/add', (req, res, next) => {
 
 router.post('/delete', (req, res, next) => {
   console.log("Deleting blog with this id");
-  var db = new sqlite3.Database('mydb3.sqlite3',
+  var db = new sqlite3.Database('myBlog.sqlite3',
     sqlite3.OPEN_READWRITE | sqlite3.OPEN_CREATE,
     (err) => {
       if (err) {
@@ -81,7 +81,7 @@ router.post('/delete', (req, res, next) => {
 
 router.post('/edit', (req, res, next) => {
   console.log("Editing blog with this id");
-  var db = new sqlite3.Database('mydb3.sqlite3',
+  var db = new sqlite3.Database('myBlog.sqlite3',
     sqlite3.OPEN_READWRITE | sqlite3.OPEN_CREATE,
     (err) => {
       if (err) {
@@ -97,7 +97,7 @@ router.post('/edit', (req, res, next) => {
 
 router.post('/clear', (req, res, next) => {
   console.log("Editing blog with this id");
-  var db = new sqlite3.Database('mydb3.sqlite3',
+  var db = new sqlite3.Database('myBlog.sqlite3',
     sqlite3.OPEN_READWRITE | sqlite3.OPEN_CREATE,
     (err) => {
       if (err) {
