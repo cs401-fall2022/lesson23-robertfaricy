@@ -1,10 +1,37 @@
 body {
   padding: 50px;
   font: 20px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: linear-gradient(to top, rgb(28,33,37), rgb(37,44,49));
 }
 
 a {
   color: #00B7FF;
 }
 
+h1 {
+  color: rgb(74, 74, 133);
+  font-size: 40;
+}
+
+h5 {
+  padding-top: 50;
+  font-size: 10px;
+}
+
+.card {
+  background: linear-gradient(to right, rgb(130,135,139), rgb(130,135,139));
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.leftSide {
+  float: left;
+  width: 60%;
+}
+
+.rightSide {
+  float: left;
+  width: 25%;
+  padding-left: 10px;
+}
 
