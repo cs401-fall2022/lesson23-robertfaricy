@@ -10,10 +10,10 @@
   </head>
   <body>
     <h1>Welcome to your blog site</h1>
-    <div class="leftSide">
+    <div class="blogList">
       <ul>
         {% for txt in data%}
-          <div class="card">
+          <div class="box">
             <ul>
               <h2>{{txt.blog_title}}</h2>
               <p>{{txt.blog_txt}}</p>
@@ -24,70 +24,66 @@
       </ul>
     </div>
 
-    <div class="rightSide">
-        <div class="card">
-            <hr>
-            <h2>Add stuff</h2>
-            <form action="/add" method="POST">
-            <div>
-                <label for="blog">What is your blog title?</label>
-                <input name="blog_title" id="blog_title" value="blog title"/>
-            </div>
-            <div>
-                <label for="blog">What is your blog txt?</label>
-                <input name="blog" id="blog_txt" value="blog text"/>
-            </div>
-            <div>
-                <button>Send my blog</button>
-            </div>
-            </form>
-        </div>
+    <div class="interactables">
+      <div class="box">
+        <h3>Add stuff</h3>
+        <form action="/add" method="POST">
+          <div>
+            <label for="blog">What is your blog title?:</label>
+            <input name="blog_title" id="blog_title" value="My new blog"/>
+          </div>
+          <div>
+            <label for="blog">Content:</label>
+            <textarea name="blog" id="blog_txt" rows="2" cols="50"></textarea>
+          </div>
+          <div>
+            <button>Post new blog</button>
+          </div>
+        </form>
+      </div>
 
-        <div class="card">
-            <hr>
-            <h2>Delete stuff</h2>
-            <form action="/delete" method="POST">
-            <div>
-                <label for="blog">Blog to delete?</label>
-                <input name="blog" id="blog" value="1"/>
-            </div>
-            <div>
-                <button>delete my blog</button>
-            </div>
-            </form>
-        </div>
+      <div class="box">
+        <h3>Delete stuff</h2>
+        <form action="/delete" method="POST">
+          <div>
+            <label for="blog">id of blog to delete?</label>
+            <input name="blog" id="blog" value=""/>
+          </div>
+          <div>
+            <button>Delete this blog</button>
+          </div>
+        </form>
+      </div>
 
-        <div class="card">
-            <hr>
-            <h2>Edit stuff</h2>
-            <form action="/edit" method="POST">
-            <div>
-                <label for="blog">Blog to edit?</label>
-                <input name="blog" id="blog" value="1"/>
-            </div>
-            <div>
-                <label for="blog">What is your blog title?</label>
-                <input id="blog_title" value="blog_title"/>
-            </div>
-            <div>
-                <label for="blog">What is your blog txt?</label>
-                <input name="blog" id="blog" value="blog"/>
-            </div>
-            <div>
-                <button>Edit my blog</button>
-            </div>
-            </form>
-        </div>
+      <div class="box">
+        <h3>Edit stuff</h2>
+        <form action="/edit" method="POST">
+          <div>
+            <label for="blog">id of blog to edit:</label>
+            <input name="blog" id="blog" value="1"/>
+          </div>
+          <div>
+            <label for="blog">What is the new title?:</label>
+            <input name="blog_title" id="blog_title" value="blog_title"/>
+          </div>
+          <div>
+            <label for="blog">What is the new content?:</label>
+            <textarea name="blog_txt" id="blog_txt" rows="2" cols="50">Blog text</textarea>
+          </div>
+          <div>
+            <button>Edit this blog</button>
+          </div>
+        </form>
+      </div>
 
-        <div class="card">
-            <h2>Clear table</h2>
-            <form action="/clear" method="POST">
-            <div>
-                <button>Clear my blog</button>
-            </div>
-            </form>
-        </div>
+      <div class="box">
+        <h3>Clear blog</h2>
+        <form action="/clear" method="POST">
+          <div>
+            <button id='clear'>Clear</button>
+          </div>
+        </form>
+      </div>
     </div>
-    </body>
   </body>
 </html>
