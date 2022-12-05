@@ -1,7 +1,11 @@
 body {
-  padding: 50px;
+  padding: 20px;
   font: 20px "Lucida Grande", Helvetica, Arial, sans-serif;
   background: linear-gradient(to top, rgb(28,33,37), rgb(37,44,49));
+  height: 100%;
+  margin: 0;
+  
+  background: linear-gradient(to bottom, #202020, #111119);
 }
 
 a {
@@ -13,25 +17,99 @@ h1 {
   font-size: 40;
 }
 
+h2 {
+  font-size: 50px;
+}
+
+h3 {
+  font-size: 35px;
+}
 h5 {
-  padding-top: 50;
+  padding-top: 10;
   font-size: 10px;
 }
 
-.card {
+.box {
   background: linear-gradient(to right, rgb(130,135,139), rgb(130,135,139));
   padding: 20px;
   margin-top: 20px;
 }
 
-.leftSide {
+.blogList {
   float: left;
   width: 60%;
 }
 
-.rightSide {
+.interactables {
   float: left;
   width: 25%;
-  padding-left: 10px;
+  padding-left: 20px;
 }
 
+textarea {
+  resize: none;
+}
+
+
+
+button {
+  align-items: center;
+  background-color: initial;
+  background-image: linear-gradient(#464d55, #25292e);
+  border-radius: 8px;
+  border-width: 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .1),0 3px 6px rgba(0, 0, 0, .05);
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: column;
+  font-family: expo-brand-demi,Roboto,sans-serif;
+  font-size: 18px;
+  height: 52px;
+  justify-content: center;
+  line-height: 1;
+  margin: 0;
+  outline: none;
+  overflow: hidden;
+  padding: 0 32px;
+  text-align: center;
+  text-decoration: none;
+  transform: translate3d(0, 0, 0);
+  transition: all 150ms;
+  vertical-align: baseline;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+button#clear:hover {
+  background: repeating-linear-gradient(
+  45deg,
+  rgba(255, 0, 0, 0.2),
+  rgba(255, 0, 0, 0.2) 10px,
+  rgba(255, 0, 0, 0.3) 10px,
+  rgba(255, 0, 0, 0.3) 20px);
+  box-shadow: rgba(0, 1, 0, .2) 0 2px 8px;
+  opacity: .95;
+}
+
+button:hover {
+  box-shadow: rgba(0, 1, 0, .2) 0 2px 8px;
+  opacity: .95;
+}
+
+button:active {
+  outline: 0;
+}
+
+button:focus {
+  box-shadow: rgba(0, 0, 0, .5) 0 0 0 3px;
+}
+
+@media (max-width: 420px) {
+  button {
+    height: 48px;
+  }
+}
