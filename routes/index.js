@@ -23,7 +23,7 @@ router.get('/', function (req, res, next) {
               res.render('index', { title: 'Express', data: rows });
             });
           } else {
-            console.log("Creating table and inserting some sample data");
+            console.log("Creating empty blog db");
             db.exec(`create table blog (
                      blog_id INTEGER PRIMARY KEY AUTOINCREMENT,
                      blog_title VARCHAR(30),
@@ -88,8 +88,8 @@ router.post('/edit', (req, res, next) => {
         console.log("Getting error " + err);
         exit(1);
       }
-      console.log("editing 2" + req.body.blog)
-      db.exec(`update blog set blog_title='${req.body.blog_title}' where blog_id='${req.body.blog}';`);
+      console.log("editing " + req.body.blog);
+      db.exec(`update blog set blog_txt = '${req.body.blog_txt}', blog_title = '${req.body.blog_title}' where blog_id='${req.body.blog}';`);
       res.redirect('/');
     }
   );
