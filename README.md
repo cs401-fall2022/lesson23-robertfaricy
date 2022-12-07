@@ -1,4 +1,4 @@
-To run site, in bash from file directory containing
+To run site, in bash from project directory containing
 -bin
 -public
     |
